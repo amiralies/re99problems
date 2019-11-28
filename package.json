@@ -4,6 +4,7 @@
   "scripts": {
     "build": "bsb -make-world",
     "start": "bsb -make-world -w",
+    "test": "yarn build && yarn jest",
     "clean": "bsb -clean-world"
   },
   "keywords": [
@@ -12,6 +13,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@glennsl/bs-jest": "^0.4.9",
     "bs-platform": "^5.0.6"
   }
 }
