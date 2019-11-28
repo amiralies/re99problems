@@ -44,3 +44,17 @@ describe("Problem03", () => {
     )
   );
 });
+
+describe("Problem04", () => {
+  test("Empty list", () =>
+    Expect.(expect(Problem04.length([])) |> toBe(0))
+  );
+
+  test("Length-one list", () =>
+    Expect.(expect(Problem04.length(["a"])) |> toBe(1))
+  );
+
+  test("Length-three list", () =>
+    Expect.(expect(Problem04.length(["a", "b", "c"])) |> toBe(3))
+  );
+});
