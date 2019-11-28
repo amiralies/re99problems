@@ -15,3 +15,20 @@ describe("Problem01", () => {
     )
   );
 });
+
+describe("Problem02", () => {
+  test("Empty list returns none", () =>
+    Expect.(expect(Problem02.lastAndPenultimate([])) |> toBe(None))
+  );
+
+  test("Length-one returns none", () =>
+    Expect.(expect(Problem02.lastAndPenultimate(["a"])) |> toBe(None))
+  );
+
+  test("Length-four list returns last and penultimate", () =>
+    Expect.(
+      expect(Problem02.lastAndPenultimate(["a", "b", "c", "d"]))
+      |> toEqual(Some(("c", "d")))
+    )
+  );
+});
