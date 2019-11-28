@@ -32,3 +32,15 @@ describe("Problem02", () => {
     )
   );
 });
+
+describe("Problem03", () => {
+  test("Get 3th of Length-one list ", () =>
+    Expect.(expect(Problem03.at(3, ["a"])) |> toBe(None))
+  );
+
+  test("Get 3th of Length-four list ", () =>
+    Expect.(
+      expect(Problem03.at(3, ["a", "b", "c", "d"])) |> toBe(Some("c"))
+    )
+  );
+});
