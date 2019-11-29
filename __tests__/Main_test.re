@@ -70,3 +70,16 @@ describe("Problem05", () => {
     )
   );
 });
+
+describe("Problem06", () => {
+  test("False casae", () =>
+    Expect.(expect(Problem06.isPalindrome(["a", "b"])) |> toBe(false))
+  );
+
+  test("True case", () =>
+    Expect.(
+      expect(Problem06.isPalindrome(["x", "a", "m", "a", "x"]))
+      |> toBe(true)
+    )
+  );
+});
