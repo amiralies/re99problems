@@ -83,3 +83,18 @@ describe("Problem06", () => {
     )
   );
 });
+
+describe("Problem07", () =>
+  test("Flattens nested structure", () =>
+    Expect.(
+      expect(
+        Problem07.flatten([
+          One("a"),
+          Many([One("b"), Many([One("c"), One("d")]), One("e")]),
+        ]),
+      )
+      |> toEqual(["a", "b", "c", "d", "e"])
+    )
+  )
+);
+
