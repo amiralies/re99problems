@@ -58,3 +58,15 @@ describe("Problem04", () => {
     Expect.(expect(Problem04.length(["a", "b", "c"])) |> toBe(3))
   );
 });
+
+describe("Problem05", () => {
+  test("Reverse empty list", () =>
+    Expect.(expect(Problem05.rev([])) |> toEqual([]))
+  );
+
+  test("Reverse non empty list", () =>
+    Expect.(
+      expect(Problem05.rev(["a", "b", "c"])) |> toEqual(["c", "b", "a"])
+    )
+  );
+});
