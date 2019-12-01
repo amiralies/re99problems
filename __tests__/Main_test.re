@@ -140,3 +140,14 @@ describe("Problem09", () =>
     )
   )
 );
+
+describe("Problem10", () =>
+  test("Length encodes a list", () =>
+    Expect.(
+      expect(
+        Problem10.encode(["a", "a", "a", "b", "b", "c", "a", "a", "d", "d"]),
+      )
+      |> toEqual([(3, "a"), (2, "b"), (1, "c"), (2, "a"), (2, "d")])
+    )
+  )
+);
