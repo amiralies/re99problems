@@ -98,3 +98,28 @@ describe("Problem07", () =>
   )
 );
 
+describe("Problem08", () =>
+  test("Eliminates consecutive duplicates of list elements", () =>
+    Expect.(
+      expect(
+        Problem08.compress([
+          "a",
+          "a",
+          "a",
+          "a",
+          "b",
+          "c",
+          "c",
+          "a",
+          "a",
+          "d",
+          "e",
+          "e",
+          "e",
+          "e",
+        ]),
+      )
+      |> toEqual(["a", "b", "c", "a", "d", "e"])
+    )
+  )
+);
