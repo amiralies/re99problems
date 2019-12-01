@@ -123,3 +123,20 @@ describe("Problem08", () =>
     )
   )
 );
+
+describe("Problem09", () =>
+  test("Packs consecutive list items", () =>
+    Expect.(
+      expect(
+        Problem09.pack(["a", "a", "a", "b", "b", "c", "a", "a", "d", "d"]),
+      )
+      |> toEqual([
+           ["a", "a", "a"],
+           ["b", "b"],
+           ["c"],
+           ["a", "a"],
+           ["d", "d"],
+         ])
+    )
+  )
+);
