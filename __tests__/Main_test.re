@@ -151,3 +151,38 @@ describe("Problem10", () =>
     )
   )
 );
+
+describe("Problem11", () =>
+  test("Length encodes a list (modified)", () =>
+    Expect.(
+      expect(
+        Problem11.encode([
+          "a",
+          "a",
+          "a",
+          "a",
+          "b",
+          "c",
+          "c",
+          "a",
+          "a",
+          "d",
+          "e",
+          "e",
+          "e",
+          "e",
+        ]),
+      )
+      |> toEqual(
+           Problem11.[
+             Many(4, "a"),
+             One("b"),
+             Many(2, "c"),
+             Many(2, "a"),
+             One("d"),
+             Many(4, "e"),
+           ],
+         )
+    )
+  )
+);
