@@ -186,3 +186,36 @@ describe("Problem11", () =>
     )
   )
 );
+
+describe("Problem12", () =>
+  test("Length decodes a list", () =>
+    Expect.(
+      expect(
+        Problem12.decode([
+          Many(4, "a"),
+          One("b"),
+          Many(2, "c"),
+          Many(2, "a"),
+          One("d"),
+          Many(4, "e"),
+        ]),
+      )
+      |> toEqual([
+           "a",
+           "a",
+           "a",
+           "a",
+           "b",
+           "c",
+           "c",
+           "a",
+           "a",
+           "d",
+           "e",
+           "e",
+           "e",
+           "e",
+         ])
+    )
+  )
+);
