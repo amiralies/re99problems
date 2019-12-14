@@ -219,3 +219,38 @@ describe("Problem12", () =>
     )
   )
 );
+
+describe("Problem13", () =>
+  test("Length encodes a list (direct)", () =>
+    Expect.(
+      expect(
+        Problem13.encode([
+          "a",
+          "a",
+          "a",
+          "a",
+          "b",
+          "c",
+          "c",
+          "a",
+          "a",
+          "d",
+          "e",
+          "e",
+          "e",
+          "e",
+        ]),
+      )
+      |> toEqual(
+           Problem13.[
+             Many(4, "a"),
+             One("b"),
+             Many(2, "c"),
+             Many(2, "a"),
+             One("d"),
+             Many(4, "e"),
+           ],
+         )
+    )
+  )
+);
