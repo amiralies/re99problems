@@ -263,3 +263,12 @@ describe("Problem14", () =>
     )
   )
 );
+
+describe("Problem15", () =>
+  test("Replicate the elements of a list a given number of times", () =>
+    Expect.(
+      expect(Problem15.replicate(["a", "b", "c"], 3))
+      |> toEqual(["a", "a", "a", "b", "b", "b", "c", "c", "c"])
+    )
+  )
+);
