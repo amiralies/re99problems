@@ -272,3 +272,17 @@ describe("Problem15", () =>
     )
   )
 );
+
+describe("Problem16", () =>
+  test("Drop every N'th element from a list", () =>
+    Expect.(
+      expect(
+        Problem16.drop(
+          ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"],
+          3,
+        ),
+      )
+      |> toEqual(["a", "b", "d", "e", "g", "h", "j"])
+    )
+  )
+);
