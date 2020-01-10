@@ -286,3 +286,17 @@ describe("Problem16", () =>
     )
   )
 );
+
+describe("Problem17", () =>
+  test("Splits a list with given n", () =>
+    Expect.(
+      expect(
+        Problem17.split(
+          ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"],
+          3,
+        ),
+      )
+      |> toEqual((["a", "b", "c"], ["d", "e", "f", "g", "h", "i", "j"]))
+    )
+  )
+);
